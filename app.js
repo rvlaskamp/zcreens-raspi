@@ -1,7 +1,7 @@
 /**
  *  Zcreens RaspberryPi App
  */
- const amino = require('./libs/aminogfx-gl/main');
+ const amino = require('aminogfx-gl');
  const gfx = new amino.AminoGfx();
 
 /*
