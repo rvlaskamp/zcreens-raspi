@@ -2,28 +2,57 @@
  *  Zcreens RaspberryPi App
  */
  const amino = require('aminogfx-gl');
- const gfx = new amino.AminoGfx();
+ const app = new amino.AminoGfx();
 
 /*
-  Properties
+  Configuration
  */
+const dimensions = require('./config/dimensions');
+
+/*
+  Helpers
+ */
+const fetch = require('./helpers/fetch');
 
 /*
   Views
  */
 
-const startupView = require('./views/startup');
+const views = {
+  main: require('./views/main')
+}
 
- gfx.start((err) => {
+/*
+  Configure the application
+ */
+
+app.w(dimensions.app.width);
+app.h(dimensions.app.height);
+app.title('Zcreens');
+app.showFPS(false);
+
+/*
+  Start the application
+ */
+
+ app.start((err) => {
    if (err) {
      console.log('Start failed', err.message);
      return;
    }
 
-   const root = gfx.createGroup();
+   // Create and set the root group
+   const root = app.createGroup();
+   app.setRoot(root);
 
-   gfx.setRoot(root);
+   // Add the main view to the root group
+   const mainView = new views.main(app);
+   root.add(mainView.mainGroup);
 
-   root.add(startupView.create(gfx));
+   // Load the menu items
+   fetch.menuItems()
+   .then((menuItems) => {
+     mainView.addMenu(menuItems);
+   });
 
  });

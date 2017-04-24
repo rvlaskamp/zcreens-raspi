@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Televisie",
+    "icon": "tv"
+  },
+  {
+    "title": "Radio",
+    "icon": "radio"
+  },
+  {
+    "title": "Digital Signage",
+    "icon": "digital-signage"
+  },
+  {
+    "title": "Instellingen",
+    "icon": "settings"
+  }
+]
