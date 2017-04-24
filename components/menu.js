@@ -22,7 +22,7 @@ function menuComponent(app, menuItems) {
 
   menuItems.forEach((menuItem, index) => {
     const item = new menuItemComponent(app, menuItem.title, menuItem.icon, index);
-    this.menuGroup.add(item.menuItemGroup);gkv76yugchjkdwpp[joijijidijkzzjhioohdajosauUIdoiyAHiaOIousdhovxysdhdizlhgcguiagdsy0dyDUYOfyf\ldkcs`ijdsiuruiqryadwjdasuiodfjcjfdjudejcxjckdiscjjcjcvjdcjvjfdjfvj]
+    this.menuGroup.add(item.menuItemGroup);
   });
 
 }
