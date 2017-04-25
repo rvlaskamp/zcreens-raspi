@@ -19,8 +19,8 @@ function logoComponent(app) {
 }
 
 logoComponent.prototype.move = function() {
-  this.logo.sx.anim().from(this.logo.sx()).to(0.5).dur(1000).start();
-  this.logo.sy.anim().from(this.logo.sy()).to(0.5).dur(1000).start();
+  //this.logo.sx.anim().from(this.logo.sx()).to(0.8).dur(1000).start();
+  //this.logo.sy.anim().from(this.logo.sy()).to(0.8).dur(1000).start();
   // this.logo.x.anim().from(this.logo.x()).to(50).dur(1000).start();
   this.logo.y.anim().from(this.logo.y()).to(-50).dur(1000).start();
 }
