@@ -10,8 +10,8 @@ function backgroundComponent(app) {
   this.app = app;
   this.background = app.createRect();
 
-  this.background.w(app.w());
-  this.background.h(app.h());
+  this.background.w.bindTo(app.w);
+  this.background.h.bindTo(app.h);
   this.background.fill(colors.background);
 }
 
