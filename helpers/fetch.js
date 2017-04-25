@@ -4,7 +4,7 @@ function getMenuItems() {
   const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(menuItems);
-    }, 1000);
+    }, 5000);
   });
 
   return promise;
